@@ -1,0 +1,17 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+<div class="container mt-3">
+    <div class="card">
+        <form method="post" ">
+            {% csrf_token %}
+            <div>
+            {{ form.as_p }}
+            </div>
+            <button type="submit" class="btn btn-primary" >Dang nhap</button>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

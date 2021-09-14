@@ -1,0 +1,31 @@
+{% extends 'home/base.html' %}
+
+{% block title %}Trang chu - DHT265{% endblock %}
+{% block content %}
+<div class="container pt-5">
+  {% for item in objects %}
+    <div class="d-flex">
+      <div class="flex-shrink-0">
+        <img src=" {{ item.picture.url }} " alt="..." style: width="300"; height="200";>
+      </div>
+      <div class="flex-grow-1 ms-3">
+          <div>
+              <h1><a href="/", style="text-decoration: none;"> {{ item.name }}</a></h1>
+          </div>
+          <ul>
+              <li>
+                  <h5>Educator: <a href="#">{{ item.educator }} </a> </h5>
+              </li>
+              <li>
+                  <h5>So bai hoc: {{ item.num_lesson }} </h5>
+              </li>
+          </ul>
+          <div>
+              {{ item.sub_description }}
+          </div>
+      </div>
+    </div>
+    </br>
+  {% endfor %}
+</div>
+{% endblock %}
