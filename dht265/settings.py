@@ -30,7 +30,6 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'loginsite.apps.LoginsiteConfig',
     
-    'captcha',
 ]
 
 MIDDLEWARE = [
