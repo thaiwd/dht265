@@ -9,10 +9,9 @@ User = get_user_model()
 
 class RegisterForm(UserCreationForm):
     email = forms.EmailField(required=True)
-    captcha = ReCaptchaField()
     class Meta:
         model = User
-        fields = ("username", "email", "password1", "password2","captcha")
+        fields = ("username", "email", "password1", "password2",)
         field_classes = {'username': UsernameField}
 
 class ProfileEditForm(forms.ModelForm):
